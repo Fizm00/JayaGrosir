@@ -24,7 +24,7 @@ export const Footer = () => {
                         transition={{ duration: 0.8, delay: 0.3 }}
                         className="text-charcoal/40 dark:text-white/40 tracking-[0.3em] text-xs md:text-sm uppercase max-w-xl leading-relaxed"
                     >
-                        Mitra Strategis Retail & Grosir Nasional sejak 2005. Mengantarkan kesegaran dan ketersediaan tanpa kompromi.
+                        Mitra Strategis Retail & Grosir Nasional. Mengantarkan kesegaran dan ketersediaan tanpa kompromi.
                     </motion.p>
                 </div>
 
@@ -41,24 +41,29 @@ export const Footer = () => {
                     <div className="flex flex-col gap-6">
                         <h4 className="text-xs tracking-[0.4em] uppercase text-muted-gold font-bold">Jam Oprasional</h4>
                         <ul className="text-charcoal/50 dark:text-white/50 text-sm leading-loose font-light space-y-2">
-                            <li className="flex justify-between md:max-w-[200px] hoverable"><span>Senin - Sabtu:</span> <span>07:00 - 18:00</span></li>
-                            <li className="flex justify-between md:max-w-[200px] hoverable"><span>Minggu:</span> <span>Tutup</span></li>
+                            <li className="flex justify-between md:max-w-[200px] hoverable"><span>Senin - Minggu:</span> <span>07:30 - 18:00</span></li>
                         </ul>
                     </div>
 
                     <div className="flex flex-col gap-6 md:items-end">
                         <h4 className="text-xs tracking-[0.4em] uppercase text-muted-gold font-bold md:text-right">Koneksi Berantai</h4>
                         <div className="flex flex-col gap-4 md:items-end text-sm font-light">
-                            {['Instagram', 'WhatsApp', 'Email Us', 'LinkedIn'].map((social, i) => (
+                            {[
+                                { name: 'Instagram', href: '#' },
+                                { name: 'WhatsApp', href: 'https://wa.me/62882008756907' },
+                                { name: 'Email Us', href: 'mailto:cs@jayagrosir.com' }
+                            ].map((social, i) => (
                                 <motion.a
-                                    key={social}
-                                    href="#"
+                                    key={social.name}
+                                    href={social.href}
+                                    target={social.href.startsWith('http') ? "_blank" : "_self"}
+                                    rel={social.href.startsWith('http') ? "noopener noreferrer" : ""}
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                                     transition={{ duration: 0.5, delay: 0.4 + i * 0.1 }}
                                     className="hoverable text-charcoal/50 dark:text-white/50 hover:text-muted-gold transition-colors duration-300 w-fit"
                                 >
-                                    {social}
+                                    {social.name}
                                 </motion.a>
                             ))}
                         </div>

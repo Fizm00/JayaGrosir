@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion';
 
 import { BENTO_ITEMS } from '../data';
+import { AnimatedBackground } from '../components/AnimatedBackground';
 
 export const BentoGrid = () => {
     return (
         <section className="relative w-full pt-32 pb-48 md:pb-64 bg-off-white dark:bg-matte-black text-charcoal dark:text-off-white overflow-hidden z-20 transition-colors duration-700">
-            <div className="container mx-auto px-6 md:px-16 lg:px-32">
+            <AnimatedBackground />
+
+            <div className="container mx-auto px-6 md:px-16 lg:px-32 relative z-10">
 
                 <div className="mb-16 md:mb-24 flex flex-col items-center md:items-start text-center md:text-left">
                     <motion.h2

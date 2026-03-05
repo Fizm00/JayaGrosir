@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { VISION_LINES, MISSION_LINES } from '../data';
+import imgVision from '../assets/img/IMG_9677.png';
 import { useVisionAnimation } from '../hooks/useVisionAnimation';
 
 export const Vision = () => {
@@ -11,8 +12,9 @@ export const Vision = () => {
         <section id="vision" ref={containerRef} className="relative w-full h-screen bg-white dark:bg-matte-black text-off-white overflow-hidden z-20 transition-colors duration-700">
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <img
-                    src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2000&auto=format&fit=crop"
-                    alt="Vision Logistics"
+                    data-speed="0.8"
+                    src={imgVision}
+                    alt="Pusat Grosir Modern"
                     className="vision-bg w-full h-full object-cover filter brightness-[0.2] grayscale-80"
                 />
             </div>

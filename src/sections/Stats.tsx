@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { STATS_DATA } from '../data';
 import { useStatsAnimation } from '../hooks/useStatsAnimation';
+import { AnimatedBackground } from '../components/AnimatedBackground';
 
 export const Stats = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
@@ -9,7 +10,8 @@ export const Stats = () => {
 
     return (
         <section ref={sectionRef} className="relative w-full py-32 bg-off-white dark:bg-charcoal text-charcoal dark:text-off-white z-20 transition-colors duration-700">
-            <div className="container mx-auto px-6 md:px-16 lg:px-32">
+            <AnimatedBackground />
+            <div className="container mx-auto px-6 md:px-16 lg:px-32 relative z-10">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
                     {STATS_DATA.map((stat, i) => (
                         <div key={i} className="stat-item flex flex-col items-center md:items-start text-center md:text-left relative">

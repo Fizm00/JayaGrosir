@@ -1,16 +1,17 @@
 import { motion } from 'framer-motion';
 import { TESTIMONIALS_DATA } from '../data';
+import { AnimatedBackground } from '../components/AnimatedBackground';
 
 export const Testimonials = () => {
-    // Duplicate array to create a seamless infinite loop
     const doubledTestimonials = [...TESTIMONIALS_DATA, ...TESTIMONIALS_DATA];
 
     return (
         <section id="testimonials" className="py-32 md:py-40 bg-white dark:bg-charcoal overflow-hidden text-charcoal dark:text-off-white z-20 relative transition-colors duration-700">
+            <AnimatedBackground />
             <div className="container mx-auto px-6 md:px-16 lg:px-32 mb-16 md:mb-24 relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
                     <h2 className="text-4xl md:text-6xl lg:text-7xl font-light tracking-tight leading-tight max-w-2xl flex flex-wrap gap-x-3 gap-y-2">
-                        {"Dipercaya Oleh Ratusan".split(" ").map((word, i) => (
+                        {"Dipercaya Oleh Puluhan".split(" ").map((word, i) => (
                             <motion.span
                                 key={i}
                                 initial={{ opacity: 0, y: 30, filter: 'blur(5px)' }}
@@ -22,8 +23,8 @@ export const Testimonials = () => {
                                 {word}
                             </motion.span>
                         ))}
-                        <div className="w-full h-0 xl:hidden" /> {/* Line break on mobile/tablet */}
-                        {"Mitra Bisnis Loyal.".split(" ").map((word, i) => (
+                        <div className="w-full h-0 xl:hidden" />
+                        {"Customer Royal.".split(" ").map((word, i) => (
                             <motion.span
                                 key={i + 10}
                                 initial={{ opacity: 0, y: 30, filter: 'blur(5px)' }}
@@ -48,9 +49,7 @@ export const Testimonials = () => {
                 </div>
             </div>
 
-            {/* Scrolling Marquee Container */}
             <div className="relative w-full flex overflow-hidden">
-                {/* Fade Edges for premium effect */}
                 <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-linear-to-r from-white dark:from-charcoal to-transparent z-10 pointer-events-none transition-colors duration-700" />
                 <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-linear-to-l from-white dark:from-charcoal to-transparent z-10 pointer-events-none transition-colors duration-700" />
 
@@ -59,7 +58,7 @@ export const Testimonials = () => {
                     transition={{
                         repeat: Infinity,
                         ease: "linear",
-                        duration: 40, // Elegant slow speed
+                        duration: 40,
                     }}
                     className="flex gap-8 px-4 w-max"
                 >

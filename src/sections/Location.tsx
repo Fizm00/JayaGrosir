@@ -30,8 +30,8 @@ export const Location = () => {
                                 Kunjungi Toko
                             </span>
                             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight mb-8">
-                                Mari Bertemu &amp;<br />
-                                <span className="font-bold italic text-muted-gold">Berjabat Tangan.</span>
+                                Mari Berbelanja &amp;<br />
+                                <span className="font-bold italic text-muted-gold">Dapatkan Keuntungan.</span>
                             </h2>
                             <p className="text-charcoal/60 dark:text-white/60 text-lg font-light leading-relaxed mb-12 max-w-md">
                                 Lihat langsung skala operasional kami, rasakan kualitas produk, dan negosiasikan harga terbaik untuk bisnis Anda secara langsung.
@@ -53,7 +53,7 @@ export const Location = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-bold text-lg mb-2 text-charcoal dark:text-off-white">Jam Operasional</h4>
-                                        <p className="text-charcoal/50 dark:text-white/50 font-light leading-relaxed text-sm">Senin - Minggu: 05.00 - 18.00 WIB<br />(Buka Setiap Hari)</p>
+                                        <p className="text-charcoal/50 dark:text-white/50 font-light leading-relaxed text-sm">Senin - Minggu: 07.30 - 18.00 WIB<br />(Buka Setiap Hari)</p>
                                     </div>
                                 </div>
                             </div>

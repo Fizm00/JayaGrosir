@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { PROCESS_STEPS } from '../data';
 import { useProcessAnimation } from '../hooks/useProcessAnimation';
+import { AnimatedBackground } from '../components/AnimatedBackground';
 
 export const Process = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -10,7 +11,9 @@ export const Process = () => {
 
     return (
         <section ref={containerRef} className="relative w-full md:h-screen bg-white dark:bg-matte-black text-charcoal dark:text-off-white overflow-hidden py-32 md:pt-40 md:pb-12 z-20 transition-colors duration-700">
-            <div className="container mx-auto px-6 md:px-16 lg:px-32 h-full flex flex-col justify-start md:justify-center">
+            <AnimatedBackground />
+
+            <div className="container mx-auto px-6 md:px-16 lg:px-32 h-full flex flex-col justify-start md:justify-center relative z-10">
 
                 <div className="mb-16 md:mb-24 z-10 w-full relative">
                     <h2 className="text-xs md:text-sm tracking-[0.4em] uppercase text-muted-gold mb-6">Bagaimana Kami Bekerja</h2>

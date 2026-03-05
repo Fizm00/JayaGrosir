@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { STORY_CONTENT } from '../data';
 import { useStoryAnimation } from '../hooks/useStoryAnimation';
+import { AnimatedBackground } from '../components/AnimatedBackground';
 
 const SplitText = ({ text, className }: { text: string; className?: string }) => {
     return (
@@ -21,6 +22,8 @@ export const Story = () => {
 
     return (
         <section id="story" ref={containerRef} className="relative w-full md:h-screen bg-off-white dark:bg-matte-black overflow-hidden z-20 py-24 md:py-0 transition-colors duration-700">
+            <AnimatedBackground />
+
             <div className="hidden md:flex absolute inset-0 items-center justify-center pointer-events-none z-0 overflow-hidden">
                 <div className="text-[12rem] lg:text-[18rem] font-black text-charcoal/[0.04] dark:text-off-white/[0.03] whitespace-nowrap story-bg-text tracking-tighter transition-colors duration-700">
                     JAYA GROSIR SUPERMARKET JAYA GROSIR

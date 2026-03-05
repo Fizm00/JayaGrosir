@@ -10,11 +10,10 @@
 }
 
 :root {
-  /* Core Brand Colors */
   --theme-matte-black: #050a15;
-  --theme-charcoal: #0a1428;     /* Navy Blue */
-  --theme-off-white: #f5f5f7;  /* Pure White / Off-white */
-  --theme-muted-gold: #E50914;   /* Brand Red */
+  --theme-charcoal: #0a1428;     
+  --theme-off-white: #f5f5f7;  
+  --theme-muted-gold: #E50914;
   --theme-footer-bg: #080808;
 }
 
@@ -29,7 +28,6 @@
   --font-integral: "Integral CF", "Inter", sans-serif;
 }
 
-/* For Light/Dark background transitions */
 body {
   @apply bg-off-white text-charcoal dark:bg-matte-black dark:text-off-white transition-colors duration-700 ease-in-out;
 }
@@ -37,6 +35,11 @@ body {
 ::selection {
   background-color: var(--theme-muted-gold);
   color: var(--theme-matte-black);
+}
+
+@keyframes grid-drift {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-40px) translateX(-40px); }
 }
 
 

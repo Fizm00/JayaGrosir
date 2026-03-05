@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { useHeroAnimation } from '../hooks/useHeroAnimation';
 import { motion } from 'framer-motion';
+import img1 from '../assets/img/IMG_9672.png';
 
 export const Hero = () => {
     const containerRef = useRef<HTMLElement>(null);
@@ -11,7 +12,7 @@ export const Hero = () => {
         <section id="hero" ref={containerRef} className="hero-container relative w-full h-screen overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <img
-                    src="https://images.unsplash.com/photo-1584771145729-0bd9fda6529b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    src={img1}
                     alt="Pusat Grosir Sembako"
                     className="hero-bg w-full h-full object-cover filter brightness-[0.35] grayscale-20"
                 />
@@ -46,7 +47,9 @@ export const Hero = () => {
                     transition={{ delay: 2.5, duration: 1 }}
                 >
                     <a
-                        href="#location"
+                        href="https://wa.me/62882008756907"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="group relative px-8 py-4 bg-transparent border border-white/20 hover:border-muted-gold text-white text-xs tracking-widest uppercase rounded-full overflow-hidden transition-all duration-500 flex items-center gap-3 backdrop-blur-sm shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_rgba(230,190,138,0.2)]"
                     >
                         <div className="absolute inset-0 bg-muted-gold translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-0" />
