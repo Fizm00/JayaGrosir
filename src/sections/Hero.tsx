@@ -25,12 +25,12 @@ export const Hero = () => {
             >
                 <div className="overflow-hidden flex flex-col items-center justify-center gap-y-2 md:gap-y-4 text-6xl md:text-8xl lg:text-[10rem] font-bold tracking-tighter text-white px-4 text-center">
                     <div className="flex flex-wrap justify-center gap-x-6">
-                        {['TUMBUH', 'BERSAMA'].map((word, i) => (
+                        {['MURAH', 'SETIAP'].map((word, i) => (
                             <span key={`1-${i}`} className="hero-word block relative drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)]">{word}</span>
                         ))}
                     </div>
                     <div className="flex flex-wrap justify-center gap-x-6">
-                        {['KAMI'].map((word, i) => (
+                        {['HARI'].map((word, i) => (
                             <span key={`2-${i}`} className="hero-word block relative drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)]">{word}</span>
                         ))}
                     </div>
