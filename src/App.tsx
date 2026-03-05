@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { Layout } from './components/Layout';
 import { Hero } from './sections/Hero';
 import { Story } from './sections/Story';
@@ -54,6 +55,7 @@ function App() {
       <Testimonials />
       <Location />
       <Footer />
+      <Analytics />
     </Layout>
   );
 }
