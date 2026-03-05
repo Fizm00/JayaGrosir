@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { VISION_LINES, MISSION_LINES } from '../data';
-import imgVision from '../assets/img/IMG_9677.png';
+import imgVision from '../assets/img/IMG_9677.webp';
 import { useVisionAnimation } from '../hooks/useVisionAnimation';
 
 export const Vision = () => {

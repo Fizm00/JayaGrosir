@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useHeroAnimation } from '../hooks/useHeroAnimation';
 import { motion } from 'framer-motion';
-import img1 from '../assets/img/IMG_9672.png';
+import img1 from '../assets/img/IMG_9672.webp';
 
 export const Hero = () => {
     const containerRef = useRef<HTMLElement>(null);

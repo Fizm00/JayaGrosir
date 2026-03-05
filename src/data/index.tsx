@@ -1,10 +1,10 @@
-import img1 from '../assets/img/IMG_9671.png';
-import img2 from '../assets/img/IMG_9672.png';
-import img3 from '../assets/img/IMG_9673.png';
-import img4 from '../assets/img/IMG_9674.png';
-import img5 from '../assets/img/IMG_9675.png';
-import img6 from '../assets/img/IMG_9676.png';
-import img7 from '../assets/img/IMG_9677.png';
+import img1 from '../assets/img/IMG_9671.webp';
+import img2 from '../assets/img/IMG_9672.webp';
+import img3 from '../assets/img/IMG_9673.webp';
+import img4 from '../assets/img/IMG_9674.webp';
+import img5 from '../assets/img/IMG_9675.webp';
+import img6 from '../assets/img/IMG_9676.webp';
+import img7 from '../assets/img/IMG_9677.webp';
 
 export const STORY_CONTENT = [
     {
