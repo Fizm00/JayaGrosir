@@ -46,7 +46,7 @@ export const Footer = () => {
                     </div>
 
                     <div className="flex flex-col gap-6 md:items-end">
-                        <h4 className="text-xs tracking-[0.4em] uppercase text-muted-gold font-bold md:text-right">Koneksi Berantai</h4>
+                        <h4 className="text-xs tracking-[0.4em] uppercase text-muted-gold font-bold md:text-right">Hubungi Kami</h4>
                         <div className="flex flex-col gap-4 md:items-end text-sm font-light">
                             {[
                                 { name: 'Instagram', href: '#' },
