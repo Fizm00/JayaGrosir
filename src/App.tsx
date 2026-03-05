@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Layout } from './components/Layout';
 import { Hero } from './sections/Hero';
 import { Story } from './sections/Story';
@@ -56,6 +57,7 @@ function App() {
       <Location />
       <Footer />
       <Analytics />
+      <SpeedInsights />
     </Layout>
   );
 }
