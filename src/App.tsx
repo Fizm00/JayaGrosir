@@ -4,7 +4,7 @@ import { Layout } from './components/Layout';
 import { Hero } from './sections/Hero';
 import { Story } from './sections/Story';
 import { Vision } from './sections/Vision';
-import { SequenceShowcase } from './sections/SequenceShowcase';
+import { Showcase } from './sections/HorizontalShowcase';
 import { Stats } from './sections/Stats';
 import { Products } from './sections/Products';
 import { Advantages } from './sections/Advantages';
@@ -32,7 +32,7 @@ function App() {
       </div>
 
       <Story />
-      <SequenceShowcase />
+      <Showcase />
       <Vision />
 
       <div className="relative overflow-hidden bg-white dark:bg-matte-black py-4 border-y border-black/5 dark:border-white/5 transition-colors duration-700">

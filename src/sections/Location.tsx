@@ -1,8 +1,11 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 export const Location = () => {
     const sectionRef = useRef<HTMLElement>(null);
+    const [isInteracted, setIsInteracted] = useState(false);
+    
+    // ... rest of useScroll untouched ...
     const { scrollYProgress } = useScroll({
         target: sectionRef,
         offset: ["start end", "end start"]
@@ -95,8 +98,12 @@ export const Location = () => {
                             )}
                         </motion.div>
 
-                        <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none transition-opacity duration-300 lg:group-hover:opacity-0">
-                            <div className="bg-white/90 dark:bg-matte-black/90 backdrop-blur-md px-6 py-3 rounded-full text-charcoal dark:text-off-white font-light text-sm tracking-widest uppercase shadow-2xl flex items-center gap-3 border border-black/10 dark:border-white/10">
+                        <div 
+                            className={`absolute inset-0 z-20 flex items-center justify-center transition-opacity duration-300 cursor-pointer lg:pointer-events-none lg:group-hover:opacity-0 ${isInteracted ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
+                            onClick={() => setIsInteracted(true)}
+                            onTouchStart={() => setIsInteracted(true)}
+                        >
+                            <div className="bg-white/90 dark:bg-matte-black/90 backdrop-blur-md px-6 py-3 rounded-full text-charcoal dark:text-off-white font-light text-sm tracking-widest uppercase shadow-2xl flex items-center gap-3 border border-black/10 dark:border-white/10 pointer-events-auto">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" className="text-muted-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 10a3 3 0 1 0 6 0 3 3 0 0 0-6 0" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.3 6.3 1.4 1.4" /><path d="m16.3 16.3 1.4 1.4" /><path d="m6.3 17.7 1.4-1.4" /><path d="m16.3 7.7 1.4-1.4" /></svg>
                                 Jelajahi Peta
                             </div>
