@@ -6,30 +6,7 @@ import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-import img1 from '../assets/img/IMG_9671.webp';
-import img2 from '../assets/img/IMG_9676.webp';
-import img3 from '../assets/img/IMG_9673.webp';
-
-const data = [
-  { 
-      title: "MASIF", 
-      subtitle: "Skala Gudang", 
-      desc: "Kapasitas penyimpanan raksasa yang dirancang untuk menjaga ketersediaan stok tanpa henti bagi ribuan mitra bisnis.",
-      img: img1 
-  },
-  { 
-      title: "TERINTEGRASI", 
-      subtitle: "Sistem Logistik", 
-      desc: "Manajemen rantai pasok modern memastikan setiap distribusi berjalan cepat, presisi, dan dapat diandalkan.",
-      img: img2 
-  },
-  { 
-      title: "TERJAMIN", 
-      subtitle: "Kesegaran Mutu", 
-      desc: "Fasilitas kontrol suhu dan standar sirkulasi udara optimal menjaga kualitas produk grosir tetap prima hingga ke tangan pelanggan.",
-      img: img3 
-  }
-];
+import { SHOWCASE_DATA } from '../data';
 
 export const Showcase = () => {
     const sectionRef = useRef<HTMLElement>(null);
@@ -87,7 +64,7 @@ export const Showcase = () => {
                 </div>
 
                 <div className="flex flex-col gap-24 md:gap-40">
-                    {data.map((item, i) => (
+                    {SHOWCASE_DATA.map((item, i) => (
                         <div 
                             key={i} 
                             className={`showcase-item flex flex-col ${i % 2 !== 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-12 lg:gap-24 items-center`}
@@ -104,7 +81,7 @@ export const Showcase = () => {
                             
                             <div className="showcase-content w-full lg:w-1/2 flex flex-col justify-center">
                                 <span className="text-muted-gold text-sm tracking-[0.3em] font-bold uppercase mb-4 block">
-                                    0{i + 1} / 0{data.length} — {item.subtitle}
+                                    0{i + 1} / 0{SHOWCASE_DATA.length} — {item.subtitle}
                                 </span>
                                 <h4 className="text-5xl md:text-6xl lg:text-7xl font-black italic tracking-tighter mb-6 text-white drop-shadow-lg">
                                     {item.title}

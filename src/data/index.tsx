@@ -185,3 +185,24 @@ export const ADVANTAGES_DATA = [
         image: img5
     }
 ];
+
+export const SHOWCASE_DATA = [
+  { 
+      title: "MASIF", 
+      subtitle: "Skala Gudang", 
+      desc: "Kapasitas penyimpanan raksasa yang dirancang untuk menjaga ketersediaan stok tanpa henti bagi ribuan mitra bisnis.",
+      img: img1 
+  },
+  { 
+      title: "TERINTEGRASI", 
+      subtitle: "Sistem Logistik", 
+      desc: "Manajemen rantai pasok modern memastikan setiap distribusi berjalan cepat, presisi, dan dapat diandalkan.",
+      img: img2 
+  },
+  { 
+      title: "TERJAMIN", 
+      subtitle: "Kesegaran Mutu", 
+      desc: "Fasilitas kontrol suhu dan standar sirkulasi udara optimal menjaga kualitas produk grosir tetap prima hingga ke tangan pelanggan.",
+      img: img3 
+  }
+];
